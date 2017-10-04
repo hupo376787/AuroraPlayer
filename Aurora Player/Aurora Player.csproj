@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64732788-1035-435C-807B-DE846C831C0F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aurora_Player</RootNamespace>
+    <AssemblyName>Aurora Player</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>NewLogo_256.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DSkin, Version=16.4.1.8, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DSkin\AuthorizeCSkin20151015005333\【4.0】DSkin20170303101757\DSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DSkin.Design">
+      <HintPath>..\..\..\..\DSkin\AuthorizeCSkin20151015005333\【4.0】DSkin20170303101757\DSkin.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Shell32">
+      <HintPath>D:\新建文件夹\MusicPlayer\Interop.Shell32.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Visual Studio 2015\Projects\AuroraSlideShow\AuroraSlideShow\bin\Debug\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Visual Studio 2015\Projects\AuroraSlideShow\AuroraSlideShow\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.9.9\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>D:\Software\sqlite-netFx40-static-binary-2010-1.0.102.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="taglib-sharp">
+      <HintPath>C:\Users\Vincent\Desktop\APlayer\taglib-sharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutMe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutMe.designer.cs">
+      <DependentUpon>AboutMe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ad.Designer.cs">
+      <DependentUpon>Ad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EndUserLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndUserLicense.Designer.cs">
+      <DependentUpon>EndUserLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\APlayerHelper.cs" />
+    <Compile Include="BaseFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFrm.Designer.cs">
+      <DependentUpon>BaseFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\CharHelper.cs" />
+    <Compile Include="Helper\ColorHelper.cs" />
+    <Compile Include="Helper\CommandHelper.cs" />
+    <Compile Include="ControlFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlFrm.Designer.cs">
+      <DependentUpon>ControlFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\CustomContextMenuStrip.cs" />
+    <Compile Include="Helper\DirectoryHelper.cs" />
+    <Compile Include="DLNA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DLNA.Designer.cs">
+      <DependentUpon>DLNA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donate.designer.cs">
+      <DependentUpon>Donate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\DllHelper.cs" />
+    <Compile Include="Helper\EmailHelper.cs" />
+    <Compile Include="Helper\EncryptHelper.cs" />
+    <Compile Include="Helper\FileHelper.cs" />
+    <Compile Include="FileInfoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileInfoFrm.Designer.cs">
+      <DependentUpon>FileInfoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishPlayToDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishPlayToDo.Designer.cs">
+      <DependentUpon>FinishPlayToDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\FlashWindowHelper.cs" />
+    <Compile Include="Helper\FolderBrowserDialog.cs" />
+    <Compile Include="Helper\FormHelper.cs" />
+    <Compile Include="Helper\ImageHelper.cs" />
+    <Compile Include="Helper\IniHelper.cs" />
+    <Compile Include="Helper\InternetHelper.cs" />
+    <Compile Include="Helper\IPHelper.cs" />
+    <Compile Include="Helper\IPHelper1.cs" />
+    <Compile Include="Helper\LinkFile.cs" />
+    <Compile Include="Helper\RegistryHelper.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuroraMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuroraMessageBox.designer.cs">
+      <DependentUpon>AuroraMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\MySqlHelper.cs" />
+    <Compile Include="MenuRender\AuroraMenuRender.cs" />
+    <Compile Include="MenuRender\ColorConfig.cs" />
+    <Compile Include="PauseStateFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PauseStateFrm.Designer.cs">
+      <DependentUpon>PauseStateFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayListFrm.Designer.cs">
+      <DependentUpon>PlayListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass.cs" />
+    <Compile Include="ScreenShot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScreenShot.Designer.cs">
+      <DependentUpon>ScreenShot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetTask.Designer.cs">
+      <DependentUpon>SetTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuickSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuickSetting.Designer.cs">
+      <DependentUpon>QuickSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\SQLiteHelper.cs" />
+    <Compile Include="Helper\TimeHelper.cs" />
+    <Compile Include="TimeLineFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeLineFrm.Designer.cs">
+      <DependentUpon>TimeLineFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipFrm.Designer.cs">
+      <DependentUpon>TipFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TitleBarFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TitleBarFrm.Designer.cs">
+      <DependentUpon>TitleBarFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TV.Designer.cs">
+      <DependentUpon>TV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VR.Designer.cs">
+      <DependentUpon>VR.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutMe.resx">
+      <DependentUpon>AboutMe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ad.resx">
+      <DependentUpon>Ad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseFrm.resx">
+      <DependentUpon>BaseFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlFrm.resx">
+      <DependentUpon>ControlFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLNA.resx">
+      <DependentUpon>DLNA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donate.resx">
+      <DependentUpon>Donate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndUserLicense.resx">
+      <DependentUpon>EndUserLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileInfoFrm.resx">
+      <DependentUpon>FileInfoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishPlayToDo.resx">
+      <DependentUpon>FinishPlayToDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuroraMessageBox.resx">
+      <DependentUpon>AuroraMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PauseStateFrm.resx">
+      <DependentUpon>PauseStateFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayListFrm.resx">
+      <DependentUpon>PlayListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenShot.resx">
+      <DependentUpon>ScreenShot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetTask.resx">
+      <DependentUpon>SetTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuickSetting.resx">
+      <DependentUpon>QuickSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeLineFrm.resx">
+      <DependentUpon>TimeLineFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipFrm.resx">
+      <DependentUpon>TipFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.cfg" />
+    <EmbeddedResource Include="TitleBarFrm.resx">
+      <DependentUpon>TitleBarFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TV.resx">
+      <DependentUpon>TV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VR.resx">
+      <DependentUpon>VR.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\微信.png" />
+    <None Include="Resources\支付宝.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="APlayer3Lib">
+      <Guid>{97830570-35FE-4195-83DE-30E79B718713}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAPlayer3Lib">
+      <Guid>{97830570-35FE-4195-83DE-30E79B718713}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tips18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tips24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tips32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AssistiveTouch128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Volumn0_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Volumn1_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Volumn-1_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Volumn2_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Volumn3_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayList_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gold_16.png" />
+    <None Include="Resources\ReceiveGold.wav" />
+    <None Include="Resources\Samsung10_18.png" />
+    <None Include="Resources\Samsung1_18.png" />
+    <None Include="Resources\Ckeck-5-22.png" />
+    <None Include="Resources\Yixin_LOGO_64x64.png" />
+    <None Include="Resources\Baidu_LOGO_64x64.png" />
+    <None Include="Resources\Weixin_LOGO_64x64.png" />
+    <None Include="Resources\QQ_LOGO_64x64.png" />
+    <None Include="Resources\Weibo_LOGO_64x64.png" />
+    <None Include="Resources\Ckeck-4-22.png" />
+    <None Include="Resources\Ckeck-3-22.png" />
+    <None Include="Resources\Ckeck-2-22.png" />
+    <None Include="Resources\Ckeck-1-22.png" />
+    <None Include="Resources\Ckeck-0-21.png" />
+    <None Include="Resources\PayLogo_Transparent.png" />
+    <None Include="Resources\UserCenter.png" />
+    <None Include="Resources\Wrong_24.png" />
+    <None Include="Resources\Right_24.png" />
+    <None Include="Resources\Sex_Unknown.png" />
+    <None Include="Resources\Sex_Male.png" />
+    <None Include="Resources\Sex_Female.png" />
+    <None Include="Resources\Dribbble.jpg" />
+    <None Include="Resources\VRCardbox1_24.png" />
+    <None Include="Resources\VRCardbox_24.png" />
+    <None Include="Resources\VR15-100.png" />
+    <None Include="Resources\VR11-100.png" />
+    <None Include="Resources\VR9-100.png" />
+    <None Include="Resources\VR7-100.png" />
+    <None Include="Resources\VR4-100.png" />
+    <None Include="Resources\VR3-100.png" />
+    <None Include="Resources\VR1-100.png" />
+    <None Include="Resources\VR0-100.png" />
+    <None Include="Resources\Donate_24.png" />
+    <None Include="Resources\Settingss.png" />
+    <None Include="Resources\FullScreenN.png" />
+    <None Include="Resources\FullScreenF.png" />
+    <None Include="Resources\LG.png" />
+    <None Include="Resources\Samsung10.png" />
+    <None Include="Resources\Samsung1.png" />
+    <None Include="Resources\Nail.png" />
+    <None Include="Resources\Camera.png" />
+    <None Include="Resources\Skin.png" />
+    <None Include="Resources\FeedBack.png" />
+    <None Include="Resources\AP_Press.png" />
+    <None Include="Resources\AP_Hover.png" />
+    <None Include="Resources\AP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NewLogo_256.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
