@@ -1,0 +1,8 @@
+﻿//格式说明
+//第一个字段是节目名称
+//第二个字段是节目源地址，多个节目源地址请用英文逗号分隔
+//中间用英文逗号分隔
+//例如：央视1套-综合频道,http://125.62.17.76:8114/LIVES/0_006_0.m3u8,http://110.77.0.182:1935/dvr/1001.stream/playlist.m3u8
+CHC高清,http://slave.nx96200.cn:13164/playurl?programid=4200900121&playtype=live&accesstoken=R5746FF7CU3ECC8289K7748C58FM30E3499W80675&qamname=djammon&auth=no
+央视1套-综合频道,http://60.214.208.202:9222/mweb/cmv/cctv1.m3u8,http://222.191.24.5:6610/2/2/ch00000090990000001017/index.m3u8?ispcode=3,http://222.191.24.5:6610/2/2/ch00000090990000001018/index.mndex.m3u8?ispcode=3
+央视1套-综合频道,http://60.214.208.202:9222/mweb/cmv/cctv1.m3u8,http://222.191.24.5:6610/2/2/ch00000090990000001017/index.m3u8?ispcode=3,http://222.191.24.5:6610/2/2/ch00000090990000001018/index.mndex.m3u8?ispcode=3
